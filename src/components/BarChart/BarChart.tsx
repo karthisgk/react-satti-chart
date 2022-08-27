@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 interface BarChartData {
     label: string;
@@ -89,20 +90,21 @@ export default function BarChart({ width, height, ...props }: BarChartProps) {
         })
     }
 
-    const canvasElement = React.useRef(null);
+    var id = "react-satti-canvas-" + uuidv4()
 
-    React.useEffect(() => {
-        if (Array.isArray(props.data) && props.data.length) {
+    const init = () => {
+        var canvasElement = document.getElementById(id) as HTMLCanvasElement
+        if (canvasElement && Array.isArray(props.data) && props.data.length) {
             barchart({
-                element: canvasElement.current,
+                element: canvasElement,
                 ...props
             })
         }
-    }, [props])
+    }
 
     return (
         <>
-            <canvas ref={canvasElement} width={width || "300"} height={height || "300"}></canvas>
+            <canvas onLoad={init} id={id} width={width || "300"} height={height || "300"}></canvas>
         </>
     )
 }
