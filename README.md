@@ -10,9 +10,9 @@ You can get it on NPM installing `react-satti-chart` component as a project depe
 npm install react-satti-chart
 ```
 
-![Screen Shot](https://raw.githubusercontent.com/karthisgk/react-pendulum-loader/main/assets/images/light.png)
+![Screen Shot](https://raw.githubusercontent.com/karthisgk/react-satti-chart/main/assets/images/light.png)
 
-![Screen Shot](https://raw.githubusercontent.com/karthisgk/react-pendulum-loader/main/assets/images/dark.png)
+![Screen Shot](https://raw.githubusercontent.com/karthisgk/react-satti-chart/main/assets/images/dark.png)
 
 ## Setup
 
